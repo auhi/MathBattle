@@ -24,19 +24,21 @@ public class MathBattle
 	Scanner in = new Scanner(System.in);
 	System.out.println("enter 1 for single player mode. Enter 2 for two player mode: ");
 	playerNumber = in.nextInt();
-
 	if(playerNumber ==1)
 		{
+			System.out.println("Please enter your name: ");
+			String playerName = in.next();
+		Interface FirstInterface = new Interface(playerNumber,playerName);
+		FirstInterface.FirstScreen();
 
-
-		} else if (playerNumber ==2)
+		} /*else if (playerNumber ==2)
 		{
 
 
 		}else
 		{
 
-		}
+		}*/
 
 
 	}
