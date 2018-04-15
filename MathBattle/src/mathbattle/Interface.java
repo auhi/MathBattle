@@ -6,6 +6,7 @@
 package mathbattle;
 
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -15,7 +16,7 @@ import javax.swing.JTextField;
  *
  * @author JO Phillips
  */
-public class Interface  
+public class Interface
 {
 
 	private String name;
@@ -28,19 +29,31 @@ public class Interface
 
 	}
 
-	public void FirstScreen() 
+	public void FirstScreen()
 	{
-		
+
 		JFrame FirstFrame = new JFrame();
-		JPanel screen2 = new JPanel();
-		screen2.setLayout(new FlowLayout());
-		screen2.add(new JLabel("placeholder text"));
-		screen2.add(new JTextField(10));
+		JPanel panel2 = new JPanel();
+		panel2.setLayout(new FlowLayout());
+		panel2.add(new JLabel("placeholder text"));
+		panel2.add(new JTextField(10));
 		FirstFrame.setVisible(true);
-		FirstFrame.setContentPane(screen2);
+		FirstFrame.setContentPane(panel2);
 		FirstFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		FirstFrame.setTitle(name);
+		FirstFrame.setTitle("MathBattle!");
 		FirstFrame.pack();
 	}
 
+	public void SecondScreen()
+	{
+
+		JFrame SecondFrame = new JFrame();
+		JPanel panel3 = new JPanel();
+		SecondFrame.setTitle("MathBattle!");
+		SecondFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		panel3.setLayout(new GridLayout(6, 6, 6, 3));
+		panel3.add(new JLabel("Type the answer before timer runs out!"));
+		panel3.add(new JTextField(10));
+		
+	}
 }
